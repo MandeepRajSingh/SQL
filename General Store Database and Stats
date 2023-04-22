@@ -1,0 +1,27 @@
+--Create new table and colums for store
+CREATE TABLE MaxStore (id integer PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, description TEXT, rating INTEGER, aisle INTEGER);
+--Insert values into tables
+INSERT INTO
+MaxStore VALUES
+(1, "Gundam", 5, 59.99, "New Gundam Action Figure", 9.8, 1),
+(2, "SF Games", 10, 69.99, "New StreetFighter Dual", 9.9, 2),
+(3, "Nintendo Switch", 5, 320.00, "New LED Switch", 10.0, 3),
+(4, "Ninjago Lego", 15, 129.99, "New Ninjago set", 8.7, 4),
+(5, "FF Poster", 15, 29.99, "New Fantasy Anime", 9.3, 5),
+(6, "DBX Figure", 25, 15.99, "New DBZ Mini Fig", 9.6, 6),
+(7, "SQL Book", 15, 25.99, "New SQL Study Guide", 8, 7),
+(8, "Bike", 10, 349.99, "New DMX Class II", 9.7, 8),
+(9, "PS 5", 5, 599.99, "New PlayStation 5", 9.6, 9),
+(10, "2TB SD PS5", 4, 199.99, "PS 5 Memory", 9.7, 10),
+(11, "Opitmus Prime", 3, 499.99, "Transformers", 10.0, 11),
+(12, "D & D", 4, 15.99, "Dragons & Dragons poster", 7.6, 12)
+(13, "Switch custom", 5, 15.99, "N. Switch skins",7.2, 13),
+(14, "Takis", 10, 5.99, "Blue Heat Takis", 8.2, 14),
+(15, "Gaming PC", 4, 1200.00, "Gaming Laptop", 8.6, 15),
+(16, "Sour Straws", 15, 5.99, "Sour Candy", 7.6, 16)
+
+--Show all items by price in ascending order
+Select * from MaxStore order by Price asc;
+
+--Show total value of inventory
+Select SUM(quantity*price) from MaxStore
